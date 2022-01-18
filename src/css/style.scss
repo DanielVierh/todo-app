@@ -142,6 +142,7 @@ input {
     border-radius: 10px;
     padding-left: 1rem;
     margin-right: 5px;
+    box-shadow: 0 0 35px black;
 }
 
 .addButton {
@@ -151,6 +152,7 @@ input {
     font-size: 1.5rem;
     color: green;
     cursor: pointer;
+    box-shadow: 0 0 35px black;
 }
 
 h2 {
@@ -171,9 +173,10 @@ h2 {
     flex-direction: column;
     height: 80vh;
     overflow-y: auto;
-    box-shadow: inset 5px 5px 15px black, inset 5px 5px 20px black;
+    box-shadow: inset 15px 5px 15px black, inset 5px 5px 20px black;
     border-radius: 15px;
     width: 100%;
+    border-top: 15px solid rgba(0, 0, 0, 0.7);
 }
 
 .scrollable-element {
