@@ -42,7 +42,7 @@ body {
   margin: 10px;
   background: -webkit-gradient(linear, left top, right top, from(#6b6b6b), to(#050505));
   background: linear-gradient(to right, #6b6b6b, #050505);
-  border-radius: 30px 30px 0 0;
+  border-radius: 30px 30px 12px 15px;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.425);
   -webkit-box-shadow: 0 0 15px white, inset -5px -5px 15px white;
@@ -88,6 +88,7 @@ ul li {
           box-shadow: 5px 5px 15px black, inset 5px 5px 15px gray;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  padding: 7px;
 }
 
 ul li p {
@@ -107,6 +108,7 @@ ul li .buttonContainer {
       -ms-flex-pack: center;
           justify-content: center;
   width: 40%;
+  padding: 5px;
 }
 
 ul li:hover {
@@ -126,15 +128,28 @@ p {
   text-decoration: line-through;
 }
 
+.isDone .changeStatus {
+  background-color: greenyellow;
+  color: black;
+}
+
+.isDone .changeStatus:hover {
+  -webkit-box-shadow: 0 0 20px green;
+          box-shadow: 0 0 20px green;
+}
+
 .delete {
   padding: 0.5rem;
   border-radius: 7px;
   background-color: red;
   color: white;
+  border: 1px solid rgba(255, 255, 255, 0.466);
   font-size: 1.2rem;
   margin: 5px;
   border: none;
   cursor: pointer;
+  -webkit-box-shadow: inset 1px 1px 5px white;
+          box-shadow: inset 1px 1px 5px white;
 }
 
 .delete:hover {
@@ -145,15 +160,15 @@ p {
 .changeStatus {
   padding: 0.5rem;
   border-radius: 7px;
-  background-color: greenyellow;
-  border: none;
+  background-color: black;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.466);
   font-size: 1.2rem;
   margin: 5px;
-}
-
-.changeStatus:hover {
-  -webkit-box-shadow: 0 0 20px green;
-          box-shadow: 0 0 20px green;
+  cursor: pointer;
+  -webkit-box-shadow: inset 1px 1px 5px white;
+          box-shadow: inset 1px 1px 5px white;
+  text-shadow: 1px 1px 2px white;
 }
 
 input {
@@ -215,5 +230,16 @@ h2 {
   #app {
     width: 100%;
   }
+}
+
+.fa-thumbtack {
+  color: orange;
+}
+
+.fa-check-circle {
+  color: green;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 /*# sourceMappingURL=style.css.map */
