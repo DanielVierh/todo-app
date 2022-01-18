@@ -31,12 +31,12 @@
 
         <h2>Offene Todos</h2>
         <ul>
-            <li v-for="todo in openTodo"><i class="fas fa-thumbtack"></i> {{ todo.description }}</li>
+            <li v-for="todo in openTodo" class="pureTodo"><i class="fas fa-thumbtack"></i> {{ todo.description }}</li>
         </ul>
 
         <h2>Abgeschlossen</h2>
         <ul>
-            <li v-for="todo in doneTodo"><i class="fas fa-check-circle"></i> {{ todo.description }}</li>
+            <li v-for="todo in doneTodo" class="pureTodo"><i class="fas fa-check-circle"></i> {{ todo.description }}</li>
         </ul>
     </div>
     </div>

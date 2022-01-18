@@ -6,33 +6,35 @@ function init() {
 }
 
 var app = new Vue({
-    el: "#app",
+    el: '#app',
     data: {
         todos: [],
-        newTodo: ''
+        newTodo: '',
     },
 
     computed: {
         doneTodo() {
-            return this.todos.filter(todo => todo.done);
+            return this.todos.filter((todo) => todo.done);
         },
         openTodo() {
-            return this.todos.filter(todo => !todo.done);
+            return this.todos.filter((todo) => !todo.done);
         },
     },
 
     methods: {
         // Aufgabe hinzufügen
         addTodo() {
-            this.todos.push({ description: this.newTodo, done: false });
-            this.newTodo = '';
-            // Aufgabe auf Gerät speichern
-            this.store_Todos();
+            if (this.newTodo !== '') {
+                this.todos.push({description: this.newTodo, done: false});
+                this.newTodo = '';
+                this.store_Todos();
+            } else {
+                alert('Bitte ein To Do eintragen');
+            }
         },
 
-
         store_Todos() {
-            localStorage.setItem("storedToDo", JSON.stringify(this.todos));
+            localStorage.setItem('storedToDo', JSON.stringify(this.todos));
         },
 
         // Lädt abgespeichertes Array aus dem LocalStorage
@@ -52,19 +54,20 @@ var app = new Vue({
         // Aufgabe löschen, inkl. Sicherheitsabfrage
         deleteTodo(index) {
             // Sicherheitsabfrage
-            const res = window.confirm(`Das ToDo: "${this.todos[index].description}" wirklich löschen?`);
+            const res = window.confirm(
+                `Das ToDo: "${this.todos[index].description}" wirklich löschen?`,
+            );
             // Wenn mit ok bestätigt, löschen
             if (res) {
                 this.todos.splice(index, 1);
                 this.store_Todos();
             }
-        }
-    }
+        },
+    },
 });
 
-
-window.addEventListener("keydown", (e) => {
-    if(e.key === 'Enter') {
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
         app.addTodo();
     }
-})
+});

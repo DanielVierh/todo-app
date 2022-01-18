@@ -50,7 +50,8 @@ body {
 }
 
 ul {
-  max-width: 22rem;
+  max-width: 700px;
+  width: 80%;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -89,12 +90,14 @@ ul li {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   padding: 7px;
+  overflow: hidden;
 }
 
 ul li p {
   font-size: 1.5;
   text-align: center;
   width: 60%;
+  overflow: hidden;
 }
 
 ul li .buttonContainer {
@@ -114,6 +117,14 @@ ul li .buttonContainer {
 ul li:hover {
   -webkit-box-shadow: 0 0 20px white, inset 5px 5px 20px white;
           box-shadow: 0 0 20px white, inset 5px 5px 20px white;
+}
+
+.pureTodo {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding: 3px;
+  width: 70%;
 }
 
 p {
@@ -230,10 +241,14 @@ h2 {
   #app {
     width: 100%;
   }
+  .pureTodo {
+    width: 100%;
+  }
 }
 
 .fa-thumbtack {
   color: orange;
+  margin: 10px;
 }
 
 .fa-check-circle {
@@ -241,5 +256,6 @@ h2 {
   background-color: white;
   border-radius: 50%;
   border: 2px solid white;
+  margin: 10px;
 }
 /*# sourceMappingURL=style.css.map */

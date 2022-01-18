@@ -3,10 +3,9 @@ $mainBackgroundColor: rgba(0, 0, 0, 0.9);
 * {
     margin: 0;
     padding: 0;
-
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +24,7 @@ body{
     align-items: center;
     justify-content: center;
     margin: 10px;
-    background: linear-gradient(to right,#6b6b6b,#050505);
+    background: linear-gradient(to right, #6b6b6b, #050505);
     border-radius: 30px 30px 12px 15px;
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.425);
@@ -33,17 +32,17 @@ body{
 }
 
 ul {
-    max-width: 22rem;
+    max-width: 700px;
+    width: 80%;
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
 
-
     li {
         padding-left: 1rem;
-        width:100%;
+        width: 100%;
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.473);
         display: flex;
@@ -51,20 +50,21 @@ ul {
         margin: 5px;
         justify-content: space-between;
         font-weight: bold;
-        background: linear-gradient(to right,#6b6b6b,#050505);
+        background: linear-gradient(to right, #6b6b6b, #050505);
         color: white;
         box-shadow: 5px 5px 15px black, inset 5px 5px 15px gray;
         transition: all 0.5s ease-in-out;
         padding: 7px;
+        overflow: hidden;
 
-
-        p{
+        p {
             font-size: 1.5;
             text-align: center;
             width: 60%;
+            overflow: hidden;
         }
 
-        .buttonContainer{
+        .buttonContainer {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -72,32 +72,37 @@ ul {
             padding: 5px;
         }
 
-        &:hover{
+        &:hover {
             box-shadow: 0 0 20px white, inset 5px 5px 20px white;
         }
-
     }
 }
 
-p{
+.pureTodo {
+    justify-content: left;
+    padding: 3px;
+    width: 70%;
+}
+
+p {
     width: 60%;
 }
 
-.isDone{
+.isDone {
     opacity: 0.3;
-    p{
+    p {
         text-decoration: line-through;
     }
 
-    .changeStatus{
+    .changeStatus {
         // background-color: black;
         background-color: greenyellow;
         color: black;
 
-    &:hover{
-        // box-shadow: 0 0 20px white;
-        box-shadow: 0 0 20px green;
-    }
+        &:hover {
+            // box-shadow: 0 0 20px white;
+            box-shadow: 0 0 20px green;
+        }
     }
 }
 
@@ -113,7 +118,7 @@ p{
     cursor: pointer;
     box-shadow: inset 1px 1px 5px white;
 
-    &:hover{
+    &:hover {
         box-shadow: 0 0 20px red;
     }
 }
@@ -132,14 +137,14 @@ p{
     text-shadow: 1px 1px 2px white;
 }
 
-input{
+input {
     height: 30px;
     border-radius: 10px;
     padding-left: 1rem;
     margin-right: 5px;
 }
 
-.addButton{
+.addButton {
     height: 30px;
     width: 30px;
     border-radius: 5px;
@@ -148,21 +153,19 @@ input{
     cursor: pointer;
 }
 
-
-h2{
+h2 {
     text-decoration: underline;
     margin: 10px;
     text-align: center;
 }
 
-
-.inputContainer{
+.inputContainer {
     display: flex;
     align-items: center;
     margin: 20px;
 }
 
-.scrollArea{
+.scrollArea {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -171,28 +174,31 @@ h2{
     box-shadow: inset 5px 5px 15px black, inset 5px 5px 20px black;
     border-radius: 15px;
     width: 100%;
-
-
 }
 
 .scrollable-element {
     scrollbar-color: red yellow;
-  }
-
+}
 
 @media (max-width: 700px) {
-    #app{
+    #app {
+        width: 100%;
+    }
+
+    .pureTodo {
         width: 100%;
     }
 }
 
-.fa-thumbtack{
+.fa-thumbtack {
     color: orange;
+    margin: 10px;
 }
 
-.fa-check-circle{
+.fa-check-circle {
     color: green;
     background-color: white;
     border-radius: 50%;
     border: 2px solid white;
+    margin: 10px;
 }
