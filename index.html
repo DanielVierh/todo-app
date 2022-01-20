@@ -19,6 +19,10 @@
 
 
         <h2>Meine Todos</h2>
+        <div class="statusContainer">
+            <div class="capsule openStatus">{{ openQuantity }} offen</div>
+            <div class="capsule closedStatus">{{ closedQuantity }} erledigt</div>
+        </div>
         <ul>
             <li v-for="(todo, index) in todos" :class="{ 'isDone' : todo.done }">
                 <p>{{todo.description}}</p>
@@ -29,12 +33,12 @@
             </li>
         </ul>
 
-        <h2>Offene Todos</h2>
+        <h2>{{ openQuantity }}. - Offene Todos</h2>
         <ul>
             <li v-for="todo in openTodo" class="pureTodo"><i class="fas fa-thumbtack"></i> {{ todo.description }}</li>
         </ul>
 
-        <h2>Abgeschlossen</h2>
+        <h2>{{ closedQuantity }}. - Abgeschlossen</h2>
         <ul>
             <li v-for="todo in doneTodo" class="pureTodo"><i class="fas fa-check-circle"></i> {{ todo.description }}</li>
         </ul>

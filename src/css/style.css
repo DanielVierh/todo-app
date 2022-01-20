@@ -263,4 +263,39 @@ h2 {
   border: 2px solid white;
   margin: 10px;
 }
+
+.statusContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.capsule {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: #050505;
+  border-radius: 30px;
+  text-align: center;
+  margin: 10px;
+  -webkit-box-shadow: inset 1px 1px 15px white, 5px 5px 15px black;
+          box-shadow: inset 1px 1px 15px white, 5px 5px 15px black;
+  font-weight: bold;
+}
+
+.openStatus {
+  color: orange;
+  text-shadow: 1px 1px 10px orange;
+}
+
+.closedStatus {
+  color: #20c520;
+  text-shadow: 1px 1px 10px #20c520;
+}
 /*# sourceMappingURL=style.css.map */

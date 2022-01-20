@@ -19,6 +19,25 @@ var app = new Vue({
         openTodo() {
             return this.todos.filter((todo) => !todo.done);
         },
+        openQuantity() {
+            let sum = 0;
+            this.todos.forEach((todo) => {
+                if (!todo.done) {
+                    sum++;
+                }
+            });
+            return sum;
+        },
+
+       closedQuantity() {
+            let sum = 0;
+            this.todos.forEach((todo) => {
+                if (todo.done) {
+                    sum++;
+                }
+            });
+            return sum;
+        },
     },
 
     methods: {
