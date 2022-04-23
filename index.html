@@ -24,7 +24,7 @@
             <div class="capsule closedStatus">{{ closedQuantity }} erledigt</div>
         </div>
         <ul>
-            <li v-for="(todo, index) in todos" :class="{ 'isDone' : todo.done }">
+            <li v-for="(todo, index) in todos" :class="{ 'isDone' : todo.done }" @dblclick="changeTodoText(index)">
                 <p>{{todo.description}}</p>
                 <div class="buttonContainer">
                     <button class="changeStatus" @click="changeStatus(index)"><i class="fas fa-check"></i></button>
